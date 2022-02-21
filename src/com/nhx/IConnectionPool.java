@@ -1,6 +1,8 @@
 package com.nhx;
 
 import java.sql.Connection;
+import java.util.Collection;
+import java.util.List;
 
 public interface IConnectionPool {
 
@@ -9,4 +11,6 @@ public interface IConnectionPool {
     String getUrl();
     String getUsername();
     String getPassword();
+    List<Connection> getCreatedConnections();
+    List<Connection> getStoredConnections();
 }

@@ -6,9 +6,8 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-
-        ConnectionPool pool = ConnectionPool.createPool();
-        ConnectionPool pool2 = ConnectionPool.createPool();
+        IConnectionPool pool = ConnectionPool.createPool();
+        IConnectionPool pool2 = ConnectionPool.createPool();
 
         System.out.println(pool.getCreatedConnections().size());
         System.out.println(pool.getStoredConnections().size());
@@ -44,6 +43,7 @@ public class Main {
         System.out.println(pool.getStoredConnections().size());
 
         // Test projvera kolicine kreiranih objekata ConnectionPool
+        Connection connection11 = pool2.getConnection();
         System.out.println(pool2.getCreatedConnections().size());
         System.out.println(pool2.getStoredConnections().size());
 
