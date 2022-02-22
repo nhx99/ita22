@@ -1,7 +1,6 @@
 package com.nhx;
 
 import java.sql.Connection;
-import java.util.Collection;
 import java.util.List;
 
 public interface IConnectionPool {
